@@ -109,6 +109,11 @@
 	status = "okay";
 };
 
+&usb0 {
+	dr_mode = "peripheral";
+	status = "okay";
+};
+
 &pinctrl {
 	gpmi_pins_extra: gpmi-pins-extra@0 {
 		reg = <0>;
