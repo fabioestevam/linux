@@ -129,6 +129,28 @@
 };
 
 &pinctrl {
+	pinctrl-names = "default";
+	pinctrl-0 = <&hog_pins_a>;
+
+	hog_pins_a: hog@0 {
+		reg = <0>;
+		fsl,pinmux-ids = <
+			MX28_PAD_LCD_D07__GPIO_1_7 /*  Z-Wave reset connection high output */
+			MX28_PAD_LCD_D08__GPIO_1_8 /* Lutron Clear-Connect button  */
+			MX28_PAD_LCD_D09__GPIO_1_9 /*  Zigbee reset */
+			MX28_PAD_LCD_D10__GPIO_1_10 /* Lutron reset */
+			MX28_PAD_LCD_D12__GPIO_1_12 /* Input Zigbee interrupt */
+			MX28_PAD_LCD_D14__GPIO_1_14 /*  BT  power down */
+			MX28_PAD_LCD_D15__GPIO_1_15 /* Kidde Reset */ 
+			MX28_PAD_LCD_D16__GPIO_1_16 /* Kidde Data */
+			MX28_PAD_LCD_D19__GPIO_1_19 /* Kidde RF Clock */
+			MX28_PAD_LCD_D20__GPIO_1_20 /* Kidde GPIO */
+		>;
+		fsl,drive-strength = <MXS_DRIVE_4mA>;
+		fsl,voltage = <MXS_VOLTAGE_HIGH>;
+		fsl,pull-up = <MXS_PULL_DISABLE>;
+	};
+
 	gpmi_pins_extra: gpmi-pins-extra@0 {
 		reg = <0>;
 		fsl,pinmux-ids = <
