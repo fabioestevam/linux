@@ -23,6 +23,28 @@
 		gpio = <&gpio1 13 GPIO_ACTIVE_HIGH>;
 		enable-active-high;
 	};
+
+	pwmleds {
+		compatible = "pwm-leds";
+
+		led-1 {
+			label = "1";
+			max-brightness = <255>;
+			pwms = <&pwm 0 500000>;
+		};
+
+		led-2 {
+			label = "2";
+			max-brightness = <255>;
+			pwms = <&pwm 1 500000>;
+		};
+
+		led-3 {
+			label = "3";
+			max-brightness = <255>;
+			pwms = <&pwm 3 500000>;
+		};
+	};
 };
 
 &auart0 {
@@ -98,6 +120,12 @@
 		label = "gpmi-nfc-general-use";
 		reg = <0x3300000 0x4d00000>;
         };
+};
+
+&pwm {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pwm0_pins_a &pwm1_pins_a &pwm3_pins_a>;
+	status = "okay";
 };
 
 &ssp0 {
