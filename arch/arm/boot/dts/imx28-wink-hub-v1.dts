@@ -52,7 +52,7 @@
 
 &auart4 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&auart4_pins>;
+	pinctrl-0 = <&auart4_pins_a>;
 	uart-has-rtscts;
 	status = "okay";
 };
@@ -144,20 +144,6 @@
 		reg = <1>;
 		fsl,pinmux-ids = <
 			MX28_PAD_LCD_D13__GPIO_1_13
-		>;
-		fsl,drive-strength = <MXS_DRIVE_4mA>;
-		fsl,voltage = <MXS_VOLTAGE_HIGH>;
-		fsl,pull-up = <MXS_PULL_DISABLE>;
-	};
-
-
-	auart4_pins: auart4@2 {
-		reg = <2>;
-		fsl,pinmux-ids = <
-			MX28_PAD_SAIF0_BITCLK__AUART4_RX
-			MX28_PAD_SAIF0_SDATA0__AUART4_TX
-			MX28_PAD_SAIF0_MCLK__AUART4_CTS
-			MX28_PAD_SAIF0_LRCLK__AUART4_RTS
 		>;
 		fsl,drive-strength = <MXS_DRIVE_4mA>;
 		fsl,voltage = <MXS_VOLTAGE_HIGH>;
