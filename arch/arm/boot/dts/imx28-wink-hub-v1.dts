@@ -87,7 +87,7 @@
 
 &gpmi {
 	pinctrl-names = "default";
-	pinctrl-0 = <&gpmi_pins_a &gpmi_status_cfg &gpmi_pins_extra>;
+	pinctrl-0 = <&gpmi_pins_a &gpmi_pins_extra>;
 	status = "okay";
 
 	partition@0 {
