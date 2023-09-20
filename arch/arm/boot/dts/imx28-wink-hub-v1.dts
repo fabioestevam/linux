@@ -27,20 +27,20 @@
 	pwmleds {
 		compatible = "pwm-leds";
 
-		led-1 {
-			label = "1";
+		led-red {
+			label = "red";
 			max-brightness = <255>;
 			pwms = <&pwm 0 500000>;
 		};
 
-		led-2 {
-			label = "2";
+		led-green {
+			label = "green";
 			max-brightness = <255>;
 			pwms = <&pwm 1 500000>;
 		};
 
-		led-3 {
-			label = "3";
+		led-blue {
+			label = "blue";
 			max-brightness = <255>;
 			pwms = <&pwm 3 500000>;
 		};
