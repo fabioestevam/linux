@@ -156,6 +156,10 @@
 	status = "okay";
 };
 
+usbphy0  {
+	status = "okay";
+};
+
 &pinctrl {
 	pinctrl-names = "default";
 	pinctrl-0 = <&hog_pins_a>;
